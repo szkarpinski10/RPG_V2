@@ -1,5 +1,4 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#pragma once
 
 #include <string>
 
@@ -8,24 +7,37 @@ protected:
     std::string name;
     int health;
     int maxHealth;
-    int attackPower;
+    int armor;
+
+    int attackDamage;
+    float attackRange;
+    float attackSpeed; 
+
+    int x;
+    int y;
 
 public:
-    Character(std::string n, int h, int ap);
+    Character(std::string n, int h, int mH, int ar, int aD, float aR, float aS, int posX, int posY);
     virtual ~Character() {}
 
-    // Getters
+    // 
     std::string getName() const { return name; }
     int getHealth() const { return health; }
     int getMaxHealth() const { return maxHealth; }
-    int getAttackPower() const { return attackPower; }
+    int getArmor() const { return armor; }
 
-    // Virtual functions
-    virtual void takeDamage(int damage);
-    virtual bool isAlive() const;
+    int getAttackDamage() const {return attackDamage; }
+    float getAttackRange() const { return attackRange; }
+    float getAttackSpeed() const { return attackSpeed; }
+    
+    int getX() const { return x; }
+    int getY() const { return y; }
 
-    // Pure virtual function to make it abstract
-    virtual void specialAbility() = 0;
+    //
+    void takeDamage(int damage);
+    bool isAlive() const;
+    void attackTarget(Character& target);
+    void setPosition(int newX, int newY);
 };
 
-#endif
+
