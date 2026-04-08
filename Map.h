@@ -18,7 +18,7 @@ public:
 
     void generate();
     void display() const;
-    bool isWalkable(int x, int y) const;
+    bool checkIfWalkable(int x, int y) const;
     Tiles* getTile(int x, int y);
 
     //movement

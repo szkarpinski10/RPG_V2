@@ -5,7 +5,14 @@
 #include "Map.h"
 #include <iostream>
 
-int main() {
+int main(){
 
+std::cout<<"START"<<std::endl;
+
+Map map(10,6);
+map.generate();
+map.display();
+
+std::cout<<"KONIEC"<<std::endl;
     return 0;
 }

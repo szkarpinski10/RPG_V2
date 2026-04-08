@@ -12,8 +12,8 @@ private:
 
 
 public:
-
-    Tiles(int x, int y, bool walkable)
+    
+   Tiles(int x, int y, bool walkable)
         : x(x), y(y), walkable(walkable), occupant(nullptr) {}
     ~Tiles() = default;
 
@@ -25,9 +25,5 @@ public:
 
     void setOccupant(Character* character) { occupant = character; }
     void clearOccupant() { occupant = nullptr; }
-
-    
-    
-
 
 };
