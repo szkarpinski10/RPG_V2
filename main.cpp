@@ -9,7 +9,7 @@ int main(){
 
 std::cout<<"START"<<std::endl;
 
-Map map(10,6);
+Map map(10,10);
 map.generate();
 map.display();
 

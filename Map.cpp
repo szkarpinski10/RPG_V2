@@ -1,10 +1,5 @@
 #include "Map.h"
-// Map::Map(int width, int height) : width(width), height(height){
-// tiles.resize(height);
-// for (int row=0; row<height;row++){
-//     tiles[row].resize(width);
-// }
-// }
+
 
 Map::Map(int width, int height) : width(width), height(height) {
 }
@@ -40,7 +35,7 @@ void Map::display() const{
     for(int row=0;row<height;row++){
         for(int column=0;column<width;column++){
             if(tiles[row][column].hasOccupant()){
-                std::cout<<"W ";
+                std::cout<<"O ";
             }
             else if(!tiles[row][column].isWalkable()){
                 std::cout<<"# ";
@@ -53,7 +48,9 @@ void Map::display() const{
     }
 }
 
-//bool checkIfWalkable(int x, int y) const{}
+bool Map::checkIfWalkable(int x, int y) const{
+
+}
     // Tiles* getTile(int x, int y);
 
     // //movement
