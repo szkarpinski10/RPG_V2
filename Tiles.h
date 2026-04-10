@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Character.h"
-
+class Character;
 
 class Tiles{
 private:
@@ -23,7 +22,15 @@ public:
     bool hasOccupant() const { return occupant != nullptr; }
     Character* getOccupant() const { return occupant; }
 
-    void setOccupant(Character* character) { occupant = character; }
-    void clearOccupant() { occupant = nullptr; }
+    void setOccupant(Character* character){
+         occupant = character; 
+        }
+        
+    void clearOccupant(){
+         occupant = nullptr; 
+        }
 
 };
+
+
+
