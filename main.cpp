@@ -3,16 +3,15 @@
 #include "Rogue.h"
 #include "Character.h"
 #include "Map.h"
+#include "Game.h"
+#include "Menu.h"
 #include <iostream>
 
 int main(){
 
 std::cout<<"START"<<std::endl;
-
-Map map(10,10);
-map.generate();
-map.display();
-
+Game game;
+game.run();
 std::cout<<"KONIEC"<<std::endl;
     return 0;
 }

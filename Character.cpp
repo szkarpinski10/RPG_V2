@@ -15,8 +15,3 @@ bool Character::isAlive() const {
 void Character::attackTarget(Character& target){
     target.takeDamage(attackDamage);
 }
-
-void Character::setPosition(int newX, int newY) {
-    x = newX;
-    y = newY;
-}

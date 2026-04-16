@@ -34,10 +34,14 @@ public:
     int getY() const { return y; }
 
     //
+    void setPosition(int newX, int newY){
+        x=newX;
+        y=newY;
+    }
+    //
     void takeDamage(int damage);
     bool isAlive() const;
     void attackTarget(Character& target);
-    void setPosition(int newX, int newY);
 };
 
 

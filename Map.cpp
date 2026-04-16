@@ -1,7 +1,9 @@
 #include "Map.h"
 
 
-Map::Map(int width, int height) : width(width), height(height) {}
+Map::Map(int width, int height) : width(width), height(height) {
+    generate();
+}
 
 void Map::generate() {
     tiles.clear(); // czyści poprzednią mapę
